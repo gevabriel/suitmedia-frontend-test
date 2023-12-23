@@ -1,0 +1,262 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body style */
+body {
+    height: 1000px;
+}
+
+/* Header style */
+header {
+    display: flex;
+    position: fixed;
+    background-color: rgb(255, 102, 0);
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    z-index: 999;
+}
+
+/* List style */
+ul {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+/* List item style */
+li {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+/* Anchor link style */
+a {
+    color: rgb(242, 242, 242);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Active link style */
+.active {
+    border-bottom: 4px white solid;
+}
+
+/* Hidden header */
+header.hidden {
+    transform: translateY(-100%);
+}
+
+/* Banner style */
+.banner {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Parallax effect */
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    z-index: -1;
+}
+
+/* Text on banner */
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.text h1 {
+    font-size: 2.5em;
+}
+
+.text p {
+    font-size: 0.8em;
+}
+
+/* Main content container */
+.main {
+    display: flex;
+}
+
+/* Showing section */
+.showing {
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* List item and card container */
+.list-item .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: auto;
+    text-align: center;
+    max-width: 1200px;
+}
+
+/* Show-sort section */
+.show-sort {
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-page {
+    margin-right: 10px;
+}
+
+.show-page span {
+    margin-right: 70px;
+}
+
+/* Select dropdown style */
+select {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Card container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Card grid */
+.card-grid {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual card */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-img-top {
+    flex: 1;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page-numbers {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.page-numbers li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.page-numbers li a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ddd;
+    color: #333;
+}
+
+.page-numbers li a:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+.page-numbers .active a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(255, 102, 0);
+    color: #fff;
+}
+
+.page-numbers .disable a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
